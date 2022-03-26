@@ -19,13 +19,15 @@ describe("delete user func test", () =>{
         .should("eq","false")
     })
 
-    it("single delete",() =>{
+    it.only("single delete",() =>{
         cy.get(':nth-child(1) > .ant-table-selection-column > .ant-checkbox-wrapper > .ant-checkbox > .ant-checkbox-input')
         .check()
 
         cy.get('[nztype="default"]')
         .invoke('attr',"ng-reflect-disabled")
         .should("eq","false")
+
+        cy.get('span.ant-checkbox-indeterminate').should("exist")
     })
 
 })
