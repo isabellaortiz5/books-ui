@@ -6,7 +6,7 @@ describe("left banner test", () =>{
         cy.visit('http://localhost:4200/dashboard')
     })
 
-    it("Loaded web-page",() =>{
+    it("Loaded web-page state",() =>{
         cy.get("nz-sider")
         .invoke("attr","ng-reflect-nz-collapsed")
         .should("eq","false")
