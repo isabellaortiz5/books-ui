@@ -8,9 +8,12 @@ describe("add user func test", () =>{
     })
 
     it("Loaded add state",() =>{
+        cy.get('.ant-modal-header').eq(0).should("exist")
         cy.contains('Save')
         .invoke('attr',"ng-reflect-disabled").should("eq","true")
 
+        cy.get('.ant-modal-header').eq(0)
+        .should("contain","Add Book")
     })
     
     it("Add button",() =>{
@@ -40,9 +43,6 @@ describe("add user func test", () =>{
         cy.get('.ant-modal-header').eq(0).should("not.exist")
         cy.url().should("include", "/dashboard")
     })
-
-
-
 })
 
 

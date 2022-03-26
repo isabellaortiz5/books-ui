@@ -19,7 +19,7 @@ describe("delete user func test", () =>{
         .should("eq","false")
     })
 
-    it.only("single delete",() =>{
+    it("single delete",() =>{
         cy.get(':nth-child(1) > .ant-table-selection-column > .ant-checkbox-wrapper > .ant-checkbox > .ant-checkbox-input')
         .check()
 
