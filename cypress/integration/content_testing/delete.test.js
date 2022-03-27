@@ -5,7 +5,7 @@ describe("delete user func test", () =>{
         cy.visit('http://localhost:4200/dashboard')
     }) 
 
-    it.only("delete all",() =>{
+    it("delete all",() =>{
         cy.get('.ant-table-selection > .ant-checkbox-wrapper > .ant-checkbox > .ant-checkbox-input').check()
         
         cy.get('[nztype="default"]')
