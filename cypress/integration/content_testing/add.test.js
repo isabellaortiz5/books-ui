@@ -35,8 +35,8 @@ describe("add user func test", () =>{
 
     it("not empty fields add",() =>{
         cy.get("#name").click()
-        cy.get("#name").type("Cien años de soledad")
-        cy.get("#author").type("Gabriel García Márquez")
+        cy.wait(500).get("#name").type("Cien años de soledad")
+        cy.wait(500).get("#author").type("Gabriel García Márquez")
         cy.contains('Save')
         .invoke('attr',"ng-reflect-disabled").should("eq","false")
         cy.get('.ant-modal-footer > .ant-btn-primary').click()
