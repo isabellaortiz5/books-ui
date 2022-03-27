@@ -5,13 +5,7 @@ describe("delete user func test", () =>{
         cy.visit('http://localhost:4200/dashboard')
     }) 
 
-    it("Loaded add state",() =>{
-        cy.get('[nztype="default"]')
-        .invoke('attr',"ng-reflect-disabled").should("eq","true")
-
-    })
-
-    it("delete all",() =>{
+    it.only("delete all",() =>{
         cy.get('.ant-table-selection > .ant-checkbox-wrapper > .ant-checkbox > .ant-checkbox-input').check()
         
         cy.get('[nztype="default"]')

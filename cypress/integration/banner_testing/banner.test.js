@@ -80,16 +80,5 @@ describe("left banner test", () =>{
         .should("not.exist")
     })
 
-    it.only("Overview hover",() =>{
-        cy.get('.header-trigger').click()
-        cy.get("ant-menu.ant-menu-root.ant-menu-dark.ant-menu-vertical.ant-menu-inline-collapsed").trigger("onmouseover")
-
-        //ant-menu ant-menu-root ant-menu-dark ant-menu-vertical ant-menu-inline-collapsed
-       // cy.get("ant-menu-submenu.ant-menu-submenu-selected.ant-menu-submenu-vertical.ant-menu-submenu-active.ant-menu-submenu-open").trigger('mouseover')
-        //cy.get("ng-tns-c39-22.ant-menu.ant-menu-vertical.ant-menu-sub")
-        //.should("exist")
-
-    })
-
 })
 

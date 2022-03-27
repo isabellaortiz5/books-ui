@@ -37,7 +37,7 @@ describe("edit user func test", () =>{
         cy.url().should("include", "/dashboard")
     })
 
-    it.only("empty fields edit",() =>{
+    it("empty fields edit",() =>{
         cy.get("#name").focus().clear()
         cy.get("#author").focus().clear()
 

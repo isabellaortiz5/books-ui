@@ -15,7 +15,7 @@ describe("delete user func test", () =>{
     })
 
     it("check all boxes",() =>{
-        cy.get('.ant-table-selection > .ant-checkbox-wrapper > .ant-checkbox > .ant-checkbox-input').check()
+        cy.get('.ant-table-selection > .ant-checkbox-wrapper > .ant-checkbox > .ant-checkbox-input').click()
         
         cy.get(':nth-child(n) > .ant-table-selection-column > .ant-checkbox-wrapper > .ant-checkbox > .ant-checkbox-input')
         .invoke('attr',"ng-reflect-model")
@@ -25,7 +25,7 @@ describe("delete user func test", () =>{
         .invoke('attr',"ng-reflect-disabled").should("eq","false")
     })
 
-    it("check all boxes",() =>{
+    it("check single box",() =>{
         cy.get(':nth-child(1) > .ant-table-selection-column > .ant-checkbox-wrapper > .ant-checkbox > .ant-checkbox-input')
         .check()
 
