@@ -1,61 +1,101 @@
-# Library Automation Training
+# UI TESTS
 
-This repository was created in order to training to automation testing practices from scratch.
+Este repositorio fue creado para probar la interfaz de usuario de una libreria online.
 
-This repository is only the Front End, please check the [back repository](https://github.com/AgileTestingColombia/books-back) in order to have all the application
+## Banner tests
+ 
+Primero hay un set up donde se visita la página
 
-## How To Deploy the application
+#### Loaded web-page state test
+Se prueba que al cargar la página, el banner se encuentre abierto y tenga todos sus componentes.
 
-This applications is thinking to deploy in [Heroku](https://www.heroku.com/) and uses the following environment varibles:
+#### Validate link test
 
-| Env Variable     | Description                                                               | Value  |
-|------------------|---------------------------------------------------------------------------|--------|
-| BASE_URL         | The backend URL                                                           |        |
-| NODE_BUILD_FLAGS | Setting this variable will run ng build <value> in the build step instead | --prod |
+Valida el link de la página.
 
-**Note 1**: In order to set these environment variables in Heroku check [the documentation](https://devcenter.heroku.com/articles/config-vars)
+#### Validate img src test
 
-**Note 2**: Note that these variables are injected at build time if needs to change their values must redeploy the application
+Valida la referencia de la imágen.
 
-## How To Update your fork repository
+#### Closing banner tests
 
-Run the following commands:
+Valida que el banner cierre correctamente.
 
-```bash
-  git remote add upstream git@github.com:AgileTestingColombia/books-ui.git
-  git pull upstream main
-```
 
-If you have altered it, you then need to rebase it.
+#### Oppening banner tests
 
-```bash
-  git rebase upstream/main
-````
+Valida que el banner abra correctamente.
 
-## Angular Notes
+#### Link correctitude test
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.4.
+Se valida que el link del icono libreria lleve a una página.
 
-### Development server
+#### Open overview on click test
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Valida que del dashboard se abra el overview.
 
-### Code scaffolding
+#### Close overview on click test
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Valida que del dashboard se cierre el overview.
 
-### Build
+## Content tests
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### Add tests
 
-### Running unit tests
+#### Loaded add state test
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Valida que el boton add abra una ventana llamada Add Book con el boton save deshabilitado y el cancel habilitado.
 
-### Running end-to-end tests
+#### Close add tab
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+No se puede validar el test ya que el boton de cerrar no funciona en la ventana de Add Book.
 
-### Further help
+#### Not empty fields add
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Valida que el add no agregue nada si los campos están vacios.
+
+### Body tests
+
+#### Loaded body state
+
+Valida que los botones sean visibles.
+
+#### Check all boxes
+
+Valida que el boton de seleccionar todos los libros funcione.
+
+#### Check single box 
+
+Valida que se pueda seleccionar solo un libro.
+
+### Delete tests
+
+#### Delete all 
+
+No se puede validar esta prueba ya que al cargar la página desaparece por un segundo el recuadro para seleccionar todos los libros.
+
+#### Single delete
+
+Valida que se seleccione correctamente un libro para ser borrado.
+
+### Edit tests
+
+#### Edit book
+
+Valida que al editar un libro, cambie su contenido en la ui.
+
+### Loaded edit state
+
+No se puede validar esta prueba ya que al momento de editar, en la pestaña aparece agregar libro, no editarlo.
+
+### Cancel edit button
+
+Valida que se pueda cancelar la edición.
+
+### Close edit tab
+
+No se puede validar el test ya que el boton de cerrar no funciona en la ventana de Edit Book.
+
+### Empty fields edit 
+
+Valida que si los campos quedan vacios, no se pueda guardar la edición.
