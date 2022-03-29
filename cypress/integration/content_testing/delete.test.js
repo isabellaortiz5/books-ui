@@ -21,5 +21,4 @@ describe("delete user func test", () =>{
         .invoke('attr',"ng-reflect-disabled")
         .should("eq","false")
     })
-
 })

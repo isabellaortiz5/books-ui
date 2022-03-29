@@ -65,7 +65,6 @@ describe("left banner test", () =>{
         .should("eq","https://ng.ant.design/")
     })
 
-    
     it("Open overview on click",() =>{
         cy.get('.ant-menu-submenu-title').click().click()
 
