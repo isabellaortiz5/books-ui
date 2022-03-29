@@ -3,8 +3,10 @@
 Este repositorio fue creado para probar la interfaz de usuario de una libreria online.
 
 ## Banner tests
- 
-Primero hay un set up donde se visita la página
+
+### setup
+Visita la página por medio de la url: http://localhost:4200/dashboard
+
 
 #### Loaded web-page state test
 Se prueba que al cargar la página, el banner se encuentre abierto y tenga todos sus componentes.
@@ -20,7 +22,6 @@ Valida la referencia de la imágen.
 #### Closing banner tests
 
 Valida que el banner cierre correctamente.
-
 
 #### Oppening banner tests
 
@@ -39,6 +40,9 @@ Valida que del dashboard se abra el overview.
 Valida que del dashboard se cierre el overview.
 
 ## Content tests
+
+### setup
+Visita la página por medio de la url: http://localhost:4200/dashboard
 
 ### Add tests
 
